@@ -18,6 +18,7 @@ def create_question_file():
         print("Виникла помилка під час створення файлу.")
 
 def append_answer_and_question():
+    # Спробуємо виконати блок коду, що доповнює файл відповіддю та новим питанням
     try:
         # Відкриваємо файл у режимі дописування ("a" - append) для додавання відповіді та нового питання.
         with open("student_question.txt", "a", encoding="utf-8") as f:
@@ -29,6 +30,18 @@ def append_answer_and_question():
             f.write("Питання: Як створити функцію у Python?\n")
 
         # Якщо операція успішна, виводимо повідомлення
+        print("Відповідь та нове питання успішно додані.")
+    except IOError:
+        print("Виникла помилка під час додавання відповіді та питання.")
+
+def append_illia_part():
+    try:
+        with open("student_question.txt", "a", encoding="utf-8") as f:
+            f.write("\nПрізвище: Ткаченко\n")
+            f.write("Відповідь: Щоб створити функцію у Python, потрібно використовувати ключове слово 'def', після якого йде ім'я функції і список параметрів у дужках. Наприклад:\n")
+            f.write("def my_function():\n    print('Hello World')\n")
+            f.write("Питання: Що таке списки (lists) у Python і як з ними працювати?\n")
+
         print("Відповідь та нове питання успішно додані.")
     except IOError:
         print("Виникла помилка під час додавання відповіді та питання.")
@@ -51,4 +64,5 @@ def read_and_print_file():
 # Викликаємо створені функції
 create_question_file()
 append_answer_and_question()
+append_illia_part()
 read_and_print_file()
