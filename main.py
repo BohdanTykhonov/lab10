@@ -34,17 +34,17 @@ def append_answer_and_question():
     except IOError:
         print("Виникла помилка під час додавання відповіді та питання.")
 
-def append_illia_part():
+def append_olha_part():
     try:
         with open("student_question.txt", "a", encoding="utf-8") as f:
-            f.write("\nПрізвище: Ткаченко\n")
-            f.write("Відповідь: Щоб створити функцію у Python, потрібно використовувати ключове слово 'def', після якого йде ім'я функції і список параметрів у дужках. Наприклад:\n")
-            f.write("def my_function():\n    print('Hello World')\n")
-            f.write("Питання: Що таке списки (lists) у Python і як з ними працювати?\n")
+            f.write("\nПрізвище: Срібна\n")
+            f.write("Відповідь: Списки (lists) у Python — це змінювані, впорядковані колекції елементів, які можуть зберігати дані будь-якого типу. Їх створюють за допомогою квадратних дужок []\n")
+            f.write("Питання: Що таке словники у Python і як їх використовувати?\n")
 
         print("Відповідь та нове питання успішно додані.")
     except IOError:
         print("Виникла помилка під час додавання відповіді та питання.")
+
 
 def read_and_print_file():
     # Спробуємо прочитати файл і вивести його вміст
@@ -65,4 +65,5 @@ def read_and_print_file():
 create_question_file()
 append_answer_and_question()
 append_illia_part()
+append_olha_part()
 read_and_print_file()
